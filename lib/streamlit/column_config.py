@@ -32,6 +32,7 @@ __all__ = [
     "ListColumn",
     "DateColumn",
     "TimeColumn",
+    "RadioButtonsColumn"
 ]
 
 
@@ -51,4 +52,5 @@ from streamlit.elements.lib.column_types import (
     SelectboxColumn,
     TextColumn,
     TimeColumn,
+    RadioButtonsColumn,
 )

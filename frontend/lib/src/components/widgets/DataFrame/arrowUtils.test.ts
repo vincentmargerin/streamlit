@@ -42,6 +42,7 @@ import {
   DateTimeColumn,
   DateColumn,
   TimeColumn,
+  RadioButtonsColumn
 } from "./columns"
 import {
   extractCssProperty,
@@ -849,6 +850,13 @@ describe("getColumnTypeFromArrow", () => {
         numpy_type: "object",
       },
       ObjectColumn,
+    ],
+    [
+      {
+        pandas_type: "categorical",
+        numpy_type: "int8",
+      },
+      RadioButtonsColumn,
     ],
   ])(
     "interprets %p as column type: %p",

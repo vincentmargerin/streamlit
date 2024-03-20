@@ -50,6 +50,7 @@ import {
   TimeColumn,
   DateColumn,
   removeLineBreaks,
+  RadioButtonsColumn,
 } from "./columns"
 
 /**
@@ -190,6 +191,9 @@ export function getColumnTypeFromArrow(arrowType: ArrowType): ColumnCreator {
   }
   if (typeName.startsWith("list")) {
     return ListColumn
+  }
+  if (["radio"].includes(typeName)) {
+    return RadioButtonsColumn
   }
 
   return ObjectColumn
