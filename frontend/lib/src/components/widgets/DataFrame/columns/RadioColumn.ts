@@ -35,8 +35,8 @@ import {
   toSafeBoolean,
 } from "./utils"
 
-// export interface RadioButtonsColumnParams {
-//   /** A list of options available in the radiobuttons.
+// export interface RadioColumnParams {
+//   /** A list of options available in the radio.
 //    * Every value in the column needs to match one of the options.
 //    */
 //   readonly options: (string | number | boolean)[]
@@ -48,8 +48,8 @@ import {
  * and this needs to be set in the config.
  *
  */
-function RadioButtonsColumn(props: BaseColumnProps): BaseColumn {
-  // The radiobuttons column can be either string, number or boolean type
+function RadioColumn(props: BaseColumnProps): BaseColumn {
+  // The radio column can be either string, number or boolean type
   // based on the options type.
 //   let dataType: "number" | "boolean" | "string" = "string"
 
@@ -61,7 +61,7 @@ function RadioButtonsColumn(props: BaseColumnProps): BaseColumn {
 //     },
 //     // User parameters:
 //     props.columnTypeOptions
-//   ) as RadioButtonsColumnParams
+//   ) as RadioColumnParams
 
 //   const uniqueTypes = new Set(parameters.options.map(x => typeof x))
 //   if (uniqueTypes.size === 1) {
@@ -134,6 +134,6 @@ function RadioButtonsColumn(props: BaseColumnProps): BaseColumn {
   }
 }
 
-RadioButtonsColumn.isEditableType = true
+RadioColumn.isEditableType = true
 
-export default RadioButtonsColumn
+export default RadioColumn

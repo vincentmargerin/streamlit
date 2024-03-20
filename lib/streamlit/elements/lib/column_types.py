@@ -133,8 +133,8 @@ class ProgressColumnConfig(TypedDict):
     max_value: NotRequired[int | float | None]
 
 
-class RadioButtonsColumnConfig(TypedDict):
-    type: Literal["radio_buttons"]
+class RadioColumnConfig(TypedDict):
+    type: Literal["radio"]
 
 
 class ColumnConfig(TypedDict, total=False):
@@ -194,7 +194,7 @@ class ColumnConfig(TypedDict, total=False):
         | BarChartColumnConfig
         | AreaChartColumnConfig
         | ImageColumnConfig
-        | RadioButtonsColumnConfig
+        | RadioColumnConfig
         | None
     )
 
@@ -1602,8 +1602,8 @@ def ProgressColumn(
 
 
 
-@gather_metrics("column_config.RadioButtonsColumn")
-def RadioButtonsColumn(
+@gather_metrics("column_config.RadioColumn")
+def RadioColumn(
     label: str | None = None,
     *,
     width: ColumnWidth | None = None,
@@ -1668,7 +1668,7 @@ def RadioButtonsColumn(
     >>> st.data_editor(
     >>>     data_df,
     >>>     column_config={
-    >>>         "category": st.column_config.RadioButtonsColumn(
+    >>>         "category": st.column_config.RadioColumn(
     >>>             "App Category",
     >>>             help="The category of the app",
     >>>             width="medium",
@@ -1695,7 +1695,7 @@ def RadioButtonsColumn(
         disabled=disabled,
         required=required,
         default=default,
-        type_config=RadioButtonsColumnConfig(
+        type_config=RadioColumnConfig(
             type="selectbox", options=list(options) if options is not None else None
         ),
     )
