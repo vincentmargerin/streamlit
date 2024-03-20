@@ -101,6 +101,12 @@ _EDITING_COMPATIBILITY_MAPPING: Final[dict[ColumnType, list[ColumnDataKind]]] = 
         ColumnDataKind.EMPTY,
     ],
     "link": [ColumnDataKind.STRING, ColumnDataKind.EMPTY],
+    "radio": [
+        ColumnDataKind.STRING,
+        ColumnDataKind.BOOLEAN,
+        ColumnDataKind.INTEGER,
+        ColumnDataKind.FLOAT,
+        ColumnDataKind.EMPTY]
 }
 
 

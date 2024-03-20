@@ -1696,6 +1696,6 @@ def RadioColumn(
         required=required,
         default=default,
         type_config=RadioColumnConfig(
-            type="selectbox", options=list(options) if options is not None else None
+            type="radio", options=list(options) if options is not None else None
         ),
     )
